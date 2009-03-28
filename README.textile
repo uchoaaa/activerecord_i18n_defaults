@@ -6,7 +6,7 @@ ALL CREDITS TO THEIRS AUTHORS ;)
 h2. DESCRIPTION
 
 ActiveRecord i18n Defaults is a Rails 2.3.2 plugin that lets you define translations for common attributes used in more that one model. 
-You can use then in <pre>ActionView::Helpers::FormHelper label</pre> method too.
+You can use then in _ActionView::Helpers::FormHelper label_ method too.
 
 h2. INSTALLATION
 
