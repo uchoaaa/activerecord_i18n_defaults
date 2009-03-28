@@ -1,32 +1,48 @@
+h1. NOTE
+
+This plugin is just a fork from <a href="http://github.com/dcrec1/activerecord_i18n_defaults/tree/master">ActiveRecordDefaults</a> merged with <a href="http://github.com/iain/i18n_label/tree/master">I18n_label</a>.
+ALL CREDITS TO THEIRS AUTHORS ;)
+
 h2. DESCRIPTION
 
-ActiveRecord i18n Defaults is a Rails 2.2 plugin that lets you define translations for common attributes used in more that one model.
+ActiveRecord i18n Defaults is a Rails 2.3.2 plugin that lets you define translations for common attributes used in more that one model. 
+You can use then in <pre>ActionView::Helpers::FormHelper label<pre> method too.
 
 h2. INSTALLATION
 
 Install the plugin from your Rails project root:
 
-<pre><code>script/plugin install git@github.com:dcrec1/activerecord_i18n_defaults.git</code></pre>
+<pre><code>script/plugin install git@github.com:uchoaaa/activerecord_i18n_defaults.git</code></pre>
 
 h2. USAGE
 
-Define your ActiveRecord default attributes like this:
+Define your ActiveRecord default attributes with "_all". 
+In your translation file:
 
 <pre><code>en-US:
   activerecord:
     attributes:
       _all:
         login: "Login"
+		created_at: "Creation Date"
       admin:
-        login: "Custom Login"
-      user:
-        name: "Name"</code></pre>
+        login: "Custom Login"</code></pre>
 
 Then use the I18n API as usual. If an attribute for a model is not found, it will be searched in _all atributes.
 
+In your view:
+
+  <% form_for @user do |f| %>
+    <%= f.label :created_at %>
+  <% end %>
+
+The result is:
+
+  &lt;label for="topic_created_at">Creation Date</label> (please ignore the minor problem with html in github)
+
 h2. License
 
-Copyright (c) 2008 [name of plugin creator]
+Copyright (c) 2009 <a href="http://putshelloworld.wordpress.com/">Rafael Uchôa</a>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
