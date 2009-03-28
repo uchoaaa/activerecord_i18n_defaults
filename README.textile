@@ -1,4 +1,4 @@
-h1. NOTE
+h2. NOTE
 
 This plugin is just a fork from <a href="http://github.com/dcrec1/activerecord_i18n_defaults/tree/master">ActiveRecordDefaults</a> merged with <a href="http://github.com/iain/i18n_label/tree/master">I18n_label</a>.
 ALL CREDITS TO THEIRS AUTHORS ;)
